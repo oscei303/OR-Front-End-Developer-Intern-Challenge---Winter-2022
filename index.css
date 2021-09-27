@@ -1,6 +1,17 @@
+#overlay img { display: none; }
+
+#overlay.currently-loading img { 
+    display: block; 
+    width: 100%;
+    heigth: 100%;
+}
 body {
     margin: 0;
     font-family: monospace;
+    background-image: url("https://i.pinimg.com/originals/57/1d/12/571d12436f7a4aedab4f7e168184d567.gif") ;
+    background-position: center;
+    background-size: fill ;
+    
   }
   
   #img-header {
@@ -38,6 +49,10 @@ body {
     width: stretch;
     height: auto;
     display: none;
-    background: #515DA2;
-    opacity: .8;
+    opacity: .4;
+  }
+
+  .img{
+    ali: center;
+    border: #e04b52 solid 4px;
   }

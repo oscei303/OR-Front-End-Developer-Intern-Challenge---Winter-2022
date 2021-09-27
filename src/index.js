@@ -1,11 +1,12 @@
 const URL = 'https://api.nasa.gov/planetary/apod?api_key=voUerz5tG3epYpsYiAd7kk8ToigkmfY51LBMvhni'
 document.addEventListener('DOMContentLoaded', () =>{
 fetchData()
-
+let clicked = !true
 function fetchData(){
     fetch(URL)
     .then(r=>r.json())
     .then(params => {
+        console.log(params)
         const imgContainer = document.querySelector('.img-container')
         imgContainer.appendChild(createImg(params)) 
  
@@ -14,22 +15,69 @@ function fetchData(){
 
 function createImg(params) {
     let imgDiv = document.createElement('div');
-    imgDiv.className = 'photo';
-    imgDiv.innerHTML = `
+    let likeBtn = document.createElement('button')
+    imgDiv.className = 'img'
+    likeBtn.classNam = 'like-btn'
+    imgDiv.addEventListener('click', function(e) {
+      if(e.target.className === 'like-btn'){
+        console.log(e.target.innerHTML)
+          imgDiv.lastElementChild.innerHTML = 'Liked'
+          //   if(e.target.className === 'like-btn' && e.target.innerHTML === 'Liked'){
+          //   imgDiv.lastElementChild.innerHTML = 'Like'   
+          //   }   
+          }
+     
+      else if(e.target.className === 'like-btn' && e.target.innerHTML === 'Liked'){
+          console.log('clicked sgsi')
+          imgDiv.lastElementChild.innerHTML = 'Like'  
+      //   }
+        }
+
+      })
+    // 
+    if (params.url.innerHTML = 'youtube'){
+      imgDiv.innerHTML = `
       <div>
         <h1> ${params.title} </h1>
-        <h3>cc: ${params.copyright}</h3>
+        <h3></h3>
       </div>
-      <img src=${params.url} class="img" />
       <div>
-        <h2>about this img:</h2>
+      <iframe width="420" height="315"
+      src=${params.url}>
+      </iframe> 
+      </div>
+      <div>
+        <h2>MORE:</h2>
             <p>${params.explanation}</p>
       </div>
 
-      <button class="like-btn"> Like <3 </button>
+      <button class="like-btn"> Like </button>
+
     `
-    return imgDiv;
+    return imgDiv
+    } else{
+      imgDiv.innerHTML = `
+      <div>
+        <h1> ${params.title} </h1>
+        <h3></h3>
+      </div>
+      <div>
+      <img src=${params.url} class="img"/>
+      </div>
+      <div>
+        <h2>MORE:</h2>
+            <p>${params.explanation}</p>
+      </div>
+
+      <button class="like-btn"> Like </button>
+    `
+    return imgDiv
+
+    }
+    
   }
+
+
 
 
 
