@@ -1,4 +1,12 @@
+#overlay img { display: none; }
+
+#overlay.currently-loading img { 
+    display: block; 
+    width: 100%;
+    heigth: 100%;
+}
 body {
+<<<<<<< HEAD
   margin: 0;
   font-family: monospace;
 }
@@ -90,3 +98,55 @@ button:hover {
   height: auto;
   display: none;
 }
+=======
+    margin: 0;
+    font-family: monospace;
+    background-image: url("https://i.pinimg.com/originals/57/1d/12/571d12436f7a4aedab4f7e168184d567.gif") ;
+    background-position: center;
+    background-size: fill ;
+    
+  }
+  
+  #img-header {
+    display: flex;
+    justify-content: center;
+    height: stretch;
+    width: stretch;
+    opacity: .8;
+    /* height: 7rem;
+    padding: 1rem; */
+  }
+
+
+  
+  button {
+    position: relative;
+    background-color: #e04b52;
+    border: none;
+    /* border-radius: 5px; */
+    /* height: 3rem; */
+    width: max-content;
+    color: whitesmoke;
+    font-size: 10px;
+    justify-self: center;
+  }
+  
+  button:hover {
+    background-color: whitesmoke;
+    border: #e04b52 solid 1px;
+    color: #e04b52;
+  }
+  
+  .container {
+    /* padding: 1rem; */
+    width: stretch;
+    height: auto;
+    display: none;
+    opacity: .4;
+  }
+
+  .img{
+    ali: center;
+    border: #e04b52 solid 4px;
+  }
+>>>>>>> 6c89d58d9d9724f0d4bc58d655494f0f91a05245
