@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function fetchData() {
     fetch(URL)
-      .then((r) => r.json())
+      .then((response) => response.json())
       .then((params) => {
         const imgContainer = document.querySelector(".img-container");
         imgContainer.appendChild(createImg(params));
@@ -32,26 +32,50 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function createImg(params) {
-    console.log(params);
-    imgDiv.className = "photo";
-    imgDiv.innerHTML = `
-      <div class='card'>
-        <div class='top'>
-          <h1 class='title'> ${params.title} </h1>
-          <h2 class='date'>${params.date}</h2>
-        </div>
-        <img src=${params.url} class="img" />
-        <div class='botton>
-          <div class='info'>
-            <h3>About this image:</h3>
-            <p class='p'>${params.explanation}</p>
+    // console.log(params.url.includes("youtube"));
+    if (params.url.includes("youtube")) {
+      imgDiv.className = "photo";
+      imgDiv.innerHTML = `
+        <div class='card'>
+          <div class='top'>
+            <h1 class='title'> ${params.title} </h1>
+            <h3 class='date'>${params.date}</h3>
           </div>
-          <button id=${status} class="like-btn"> ♡ </button>
+          <iframe width='420' height='315'
+            src=${params.url} class='img'>
+          </iframe> 
+          <div class='bottom'>
+            <div class='info'>
+              <h3>About this image:</h3>
+              <p class='p'>${params.explanation}</p>
+            </div>
+            <button id=${status} class="like-btn"> ♡ </button>
+          </div>
         </div>
-      </div>
-
-    `;
-    return imgDiv;
+  
+      `;
+      return imgDiv;
+    } else {
+      imgDiv.className = "photo";
+      imgDiv.innerHTML = `
+        <div class='card'>
+          <div class='top'>
+            <h1 class='title'> ${params.title} </h1>
+            <h2 class='date'>${params.date}</h2>
+          </div>
+          <img src=${params.url} class='img' />
+          <div class='bottom'>
+            <div class='info'>
+              <h3>About this image:</h3>
+              <p class='p'>${params.explanation}</p>
+            </div>
+            <button id=${status} class="like-btn"> ♡ </button>
+          </div>
+        </div>
+  
+      `;
+      return imgDiv;
+    }
   }
 
   // CALL FETCH FUNCTION //

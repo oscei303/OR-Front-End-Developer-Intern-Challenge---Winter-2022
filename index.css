@@ -1,14 +1,6 @@
-#overlay img { display: none; }
-
-#overlay.currently-loading img { 
-    display: block; 
-    width: 100%;
-    heigth: 100%;
-}
 body {
-<<<<<<< HEAD
   margin: 0;
-  font-family: monospace;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 #background {
@@ -18,6 +10,7 @@ body {
   left: 0px;
   top: 0px;
   z-index: -1;
+  /* opacity: 0.8; */
 }
 
 .stretch {
@@ -25,33 +18,21 @@ body {
   height: 100%;
 }
 
-#img-header {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  /* object-fit: fill;
-  justify-content: center; */
-  height: stretch;
-  width: stretch;
-  opacity: 0.8;
-  /* height: 7rem;
-    padding: 1rem; */
-}
-
 .card {
   text-align: justify;
   text-justify: inter-word;
   border-style: solid;
-  display: flex;
   justify-content: center;
-  color: white;
+  color: black;
   width: fit-content;
   block-size: fit-content;
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
-  box-shadow: 0 0 20px 1px #fff3f3;
+  opacity: 0.7;
+  background-color: whitesmoke;
+  /* box-shadow: 0 0 20px 1px #fff3f3; */
 }
 
 .p {
@@ -59,22 +40,31 @@ body {
 }
 
 .title {
+  text-align: left;
+  text-anchor: left;
+  /* stroke-width: 3px; */
+  fill: none;
   padding: 0.25rem;
+  font-size: 40px;
+  opacity: 1;
 }
 
 .date {
   padding: 0.25rem;
+  text-align: left;
+  text-anchor: left;
 }
 
-.info {
+.bottom {
   padding: 0.25rem;
 }
 
 .img {
+  opacity: 1;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 80%;
+  width: 95%;
 }
 button {
   position: relative;
@@ -82,257 +72,23 @@ button {
   border: none;
   width: max-content;
   color: whitesmoke;
-  font-size: 10px;
+  font-size: 15px;
   justify-self: center;
+  display: block;
+  /* margin-left: auto; */
+  margin-right: auto;
+  width: 10%;
+  padding: 0.25rem;
 }
 
 button:hover {
   background-color: whitesmoke;
   border: #e04b52 solid 1px;
   color: #e04b52;
-  body {
-    margin: 0;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-  }
-  
-  #background {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    left: 0px;
-    top: 0px;
-    z-index: -1;
-    /* opacity: 0.8; */
-  }
-  
-  .stretch {
-    width: 100%;
-    height: 100%;
-  }
-  
-  .card {
-    text-align: justify;
-    text-justify: inter-word;
-    border-style: solid;
-    display: flex;
-    justify-content: center;
-    color: black;
-    width: fit-content;
-    block-size: fit-content;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-    opacity: 0.7;
-    background-color: whitesmoke;
-    /* box-shadow: 0 0 20px 1px #fff3f3; */
-  }
-  
-  .p {
-    padding: 1rem;
-  }
-  
-  .title {
-    text-align: center;
-    text-anchor: middle;
-    stroke-width: 3px;
-    fill: none;
-    padding: 0.25rem;
-    font-size: 40px;
-    opacity: 1;
-  }
-  
-  .date {
-    padding: 0.25rem;
-  }
-  
-  .info {
-    padding: 0.25rem;body {
-      margin: 0;
-      font-family: Verdana, Geneva, Tahoma, sans-serif;
-    }
-    
-    #background {
-      width: 100%;
-      height: 100%;
-      position: fixed;
-      left: 0px;
-      top: 0px;
-      z-index: -1;
-      /* opacity: 0.8; */
-    }
-    
-    .stretch {
-      width: 100%;
-      height: 100%;
-    }
-    
-    .card {
-      text-align: justify;
-      text-justify: inter-word;
-      border-style: solid;
-      display: flex;
-      justify-content: center;
-      color: black;
-      width: fit-content;
-      block-size: fit-content;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      width: 50%;
-      opacity: 0.7;
-      background-color: whitesmoke;
-      /* box-shadow: 0 0 20px 1px #fff3f3; */
-    }
-    
-    .p {
-      padding: 1rem;
-    }
-    
-    .title {
-      text-align: center;
-      text-anchor: middle;
-      stroke-width: 3px;
-      fill: none;
-      padding: 0.25rem;
-      font-size: 40px;
-      opacity: 1;
-    }
-    
-    .date {
-      padding: 0.25rem;
-    }
-    
-    .info {
-      padding: 0.25rem;
-    }
-    
-    .img {
-      opacity: 1;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      width: 80%;
-    }
-    button {
-      position: relative;
-      background-color: #3b0609;
-      border: none;
-      width: max-content;
-      color: whitesmoke;
-      font-size: 15px;
-      justify-self: center;
-      display: block;
-      /* margin-left: auto; */
-      margin-right: auto;
-      width: 10%;
-      padding: 0.25rem;
-    }
-    
-    button:hover {
-      background-color: whitesmoke;
-      border: #e04b52 solid 1px;
-      color: #e04b52;
-    }
-    
-    .container {
-      width: stretch;
-      height: auto;
-      display: none;
-    }
-    
-  }
-  
-  .img {
-    opacity: 1;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 80%;
-  }
-  button {
-    position: relative;
-    background-color: #e04b52;
-    border: none;
-    width: max-content;
-    color: whitesmoke;
-    font-size: 15px;
-    justify-self: center;
-    display: block;
-    /* margin-left: auto; */
-    margin-right: auto;
-    width: 10%;
-    padding: 0.25rem;
-  }
-  
-  button:hover {
-    background-color: whitesmoke;
-    border: #e04b52 solid 1px;
-    color: #e04b52;
-  }
-  
-  .container {
-    width: stretch;
-    height: auto;
-    display: none;
-  }
-  }
+}
 
 .container {
-  /* padding: 1rem; */
   width: stretch;
   height: auto;
   display: none;
 }
-=======
-    margin: 0;
-    font-family: monospace;
-    background-image: url("https://i.pinimg.com/originals/57/1d/12/571d12436f7a4aedab4f7e168184d567.gif") ;
-    background-position: center;
-    background-size: fill ;
-    
-  }
-  
-  #img-header {
-    display: flex;
-    justify-content: center;
-    height: stretch;
-    width: stretch;
-    opacity: .8;
-    /* height: 7rem;
-    padding: 1rem; */
-  }
-
-
-  
-  button {
-    position: relative;
-    background-color: #e04b52;
-    border: none;
-    /* border-radius: 5px; */
-    /* height: 3rem; */
-    width: max-content;
-    color: whitesmoke;
-    font-size: 10px;
-    justify-self: center;
-  }
-  
-  button:hover {
-    background-color: whitesmoke;
-    border: #e04b52 solid 1px;
-    color: #e04b52;
-  }
-  
-  .container {
-    /* padding: 1rem; */
-    width: stretch;
-    height: auto;
-    display: none;
-    opacity: .4;
-  }
-
-  .img{
-    ali: center;
-    border: #e04b52 solid 4px;
-  }
->>>>>>> 6c89d58d9d9724f0d4bc58d655494f0f91a05245
